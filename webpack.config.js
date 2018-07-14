@@ -1,5 +1,6 @@
 const path = require('path');
-const webpackCleaner = require('clean-webpack-plugin')
+const webpackCleaner = require('clean-webpack-plugin');
+const nodeExternals = require('webpack-node-externals');
 
 // the path(s) that should be cleaned
 let pathsToClean = [
@@ -9,8 +10,6 @@ let pathsToClean = [
 
 // the clean options to use
 let cleanOptions = {
-    // root:     '/full/webpack/root/path',
-    // exclude:  ['shared.js'],
     verbose:  true,
     dry:      false
 };
@@ -31,5 +30,7 @@ module.exports = {
     },
     plugins: [
         new webpackCleaner(pathsToClean, cleanOptions),
-    ]
+    ],
+    target: 'node',                 // in order to ignore built-in modules like path, fs, etc.
+    externals: [nodeExternals()],   // in order to ignore all modules in node_modules folder
 };

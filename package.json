@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "A boilerplate system design pattern to get started with Serverless",
 	"scripts": {
-		"compile-typescript": "./node_modules/.bin/tsc",
+		"compile-typescript": "tsc",
 		"compile-webpack": "npx webpack -p",
 		"build": "npm run compile-typescript && npm run compile-webpack"
 	},
@@ -37,6 +37,7 @@
 		"typescript": "^2.9.2",
 		"typescript-eslint-parser": "^15.0.0",
 		"webpack": "^4.16.0",
-		"webpack-cli": "^3.0.8"
+		"webpack-cli": "^3.0.8",
+		"webpack-node-externals": "^1.7.2"
 	}
 }
