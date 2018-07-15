@@ -29,7 +29,9 @@
 		"url": "https://github.com/nichealpham/Serverless-Boilerplate/issues"
 	},
 	"homepage": "https://github.com/nichealpham/Serverless-Boilerplate#readme",
-	"dependencies": {},
+	"dependencies": {
+		"csv-parse": "^2.5.0"
+	},
 	"devDependencies": {
 		"@types/node": "^10.1.2",
 		"ts-loader": "^4.4.2",

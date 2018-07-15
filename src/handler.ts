@@ -1,15 +1,8 @@
 import {Greeting} from './services/GreetingService';
+import {HandlerHelper} from './system/app/helper/HandlerHelper';
 
 export async function hello (event, context, callback) {
-    let greeting = new Greeting();
-    const response = {
-        statusCode: 200,
-        body: JSON.stringify({
-            message: greeting.message,
-            input: event,
-        }),
-    };
+    let greeting = new Greeting('Welcome to my Serverless Template !!!');
+    const response = HandlerHelper.successResponse(200, null, greeting.message);
     callback(null, response);
-    // Use this code if you don't use the http event with the LAMBDA-PROXY integration
-    // callback(null, { message: 'Go Serverless v1.0! Your function executed successfully!', event });
 };
