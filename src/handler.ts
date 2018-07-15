@@ -1,8 +1,11 @@
+import {Greeting} from './services/GreetingService';
+
 export async function hello (event, context, callback) {
+    let greeting = new Greeting();
     const response = {
         statusCode: 200,
         body: JSON.stringify({
-            message: 'Go Serverless v1.0! Your function executed successfully!',
+            message: greeting.message,
             input: event,
         }),
     };
