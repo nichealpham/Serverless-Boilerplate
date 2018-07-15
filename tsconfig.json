@@ -1,38 +1,19 @@
 {
     "compilerOptions": {
-        "typeRoots": ["node_modules/@types"],
-        "target": "es2017",
-        "module": "commonjs",
-        "lib": [
-            "es5",
-            "es2015",
-            "es2017",
-            "dom",
-            "scripthost"
-        ],
+        "rootDir": "./src",
+        "outDir": "./build", 
+        "preserveConstEnums": true, 
+        "strictNullChecks": true, 
+        "target": "es5", 
+        "moduleResolution": "node", 
+        "lib": ["es2015"], 
         "allowJs": true,
-        "isolatedModules": false,
-        "noImplicitAny": false,
-        "sourceMap": false,
         "removeComments": true,
-        "preserveConstEnums": true,
-        "noImplicitThis": true,
-        "strictNullChecks": true,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "suppressImplicitAnyIndexErrors": true,
-        "rootDir": "./src/",
-        "outDir": "./dest/"
     },
     "include": [
-        "./src/**/*.ts",
-        "./src/**/*.rc",
-        "./src/**/*.py",
-        "./src/**/*.js",
-        "./src/**/*.m"
+        "src/**/*"
     ],
     "exclude": [
-        "node_modules",
-        "**/*.spec.ts"
+        "**/*.map.js",
     ]
 }
