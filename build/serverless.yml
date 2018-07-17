@@ -48,8 +48,8 @@ provider:
 # you can add packaging information here
 package:
   include:
-    - ./system/**
-    - ./services/**
+    - ./app/**
+    - ./config/**
     - ../node_modules/**
 #    - include-me.js
 #  exclude:
