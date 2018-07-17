@@ -1,5 +1,5 @@
-import {Greeting} from './services/GreetingService';
-import {HandlerHelper} from './system/app/helper/HandlerHelper';
+import {Greeting} from './app/services/GreetingService';
+import {HandlerHelper} from './app/libs/helper/HandlerHelper';
 
 export async function hello (event, context, callback) {
     let greeting = new Greeting('Welcome to my Serverless Template !!!');
